@@ -11,42 +11,39 @@ function sumOrMultiply(num1, num2) {
     }
     return result
 }
-
-let result1 = sumOrMultiply(4, 7)
-console.log(result1)
-let result2 = sumOrMultiply(9, 8)
-console.log(result2)
+// console.log(sumOrMultiply(4, 7))
+// console.log(sumOrMultiply(9, 8))
 
 // 2. Определить какой четверти принадлежит точка с координатами (х,у)
 const quarter = function (x, y) {
     if (x > 0 && y > 0) {
-        return `Точка с координатами ${x} ${y} находится в первой четверти`
+        return `I`
     }
     if (x < 0 && y > 0) {
-        return `Точка с координатами ${x} ${y} находится во второй четверти`
+        return `II`
     }
     if (x < 0 && y < 0) {
-        return `Точка с координатами ${x} ${y} находится в третьей четверти`
+        return `III`
     }
     if (x > 0 && y < 0) {
-        return `Точка с координатами ${x} ${y} находится в четвертой четверти`
+        return `IV`
     }
     if (x === 0 && y === 0) {
-        return `Точка с координатами ${x} ${y} находится в центре оси координат`
+        return `Точка - начало координат`
     }
-    return `Точка с координатами ${x} ${y} находится на оси`
+    return `Точка лежит на оси`
 }
-console.log(quarter (9, 2))
-console.log(quarter (9, -2))
-console.log(quarter (-9, 2))
-console.log(quarter (-9, -2))
-console.log(quarter (0, 0))
-console.log(quarter (5, 0))
+// console.log(quarter (9, 2))
+// console.log(quarter (9, -2))
+// console.log(quarter (-9, 2))
+// console.log(quarter (-9, -2))
+// console.log(quarter (0, 0))
+// console.log(quarter (5, 0))
 
 // 3. Найти суммы только положительных из трех чисел
 function getSum(array) {
     if (Array.isArray(array) !== true) {
-        return 'Ввод массива'
+        return 'Введите массив'
     }
     let result = 0
     for (let i = 0; i < array.length; i++) {
@@ -56,8 +53,8 @@ function getSum(array) {
     }
     return result
 }
-console.log(getSum([-7, 5, -1, 0, 6]))
-console.log(getSum([2,8]))
+// console.log(getSum([-7, 5, -1, 0, 6]))
+// console.log(getSum([2,8]))
 
 // 4. Посчитать выражение макс(а*б*с, а+б+с)+3
 function getSumMax(a, b, c) {
@@ -75,7 +72,7 @@ function getSumMax(a, b, c) {
     }
     return "max: " + max
 }
-console.log(getSumMax(1, 2, 1))
+// console.log(getSumMax(1, 2, 1))
 
 // 5. Написать программу определения оценки студента по его рейтингу, на основе следующих правил
 function getRate(rate) {
@@ -96,4 +93,13 @@ function getRate(rate) {
         return 'A'
     else return 'Введите число от 0 до 100'
 }
-console.log(getRate(5))
+// console.log(getRate(5))
+// console.log(getRate(500))
+
+module.exports = {
+    sumOrMultiply,
+    quarter,
+    getSum,
+    getSumMax,
+    getRate
+}

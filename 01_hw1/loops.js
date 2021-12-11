@@ -1,16 +1,18 @@
 // 1. Найти сумму четных чисел и их количество в диапазоне от 1 до 99
-function getSumNum(sum){
-    let counter = 0
-    sum = 0
+function getSumNum(){
+    let result = {
+        sum: 0,
+        counter: 0,
+    }
     for(let i = 1; i <= 99; i++){
         if(i % 2 === 0){
-            sum = sum + i
-            counter++
+            result.sum = result.sum + i;
+            result.counter = result.counter + 1;
         }
     }
-    return 'Сумма: ' + sum + ', Количество: ' + counter
+    return result
 }
-console.log(getSumNum())
+// console.log(getSumNum())
 
 // 2. Проверить простое ли число? (число называется простым, если оно делится только само на себя и на 1)
 function checkNum(i) {
@@ -22,7 +24,8 @@ function checkNum(i) {
     }
     return i > 1
 }
-console.log(checkNum(7))
+// console.log(checkNum(7))
+// console.log(checkNum(6))
 
 // 3. Найти корень натурального числа с точностью до целого
 // (рассмотреть вариант последовательного подбора и метод бинарного поиска)
@@ -34,7 +37,7 @@ function getSqrtNum(num){
     }
     return i - 1
 }
-console.log(getSqrtNum(25))
+// console.log(getSqrtNum(25))
 // Вариант бинарного поиска
 function getSqrtNum1(num) {
     let a = num
@@ -49,7 +52,7 @@ function getSqrtNum1(num) {
     }
     return Math.floor(num)
 }
-console.log(getSqrtNum1(16))
+// console.log(getSqrtNum1(16))
 
 // 4. Вычислить факториал числа n. n! = 1*2*…*n-1*n;!
 function factorial(n) {
@@ -62,7 +65,7 @@ function factorial(n) {
     }
     return result
 }
-console.log(factorial(5))
+// console.log(factorial(5))
 
 // 5. Посчитать сумму цифр заданного числа
 function sumOfNum(num){
@@ -76,7 +79,7 @@ function sumOfNum(num){
     }
     return Math.floor(result)
 }
-console.log(sumOfNum(345))
+// console.log(sumOfNum(345))
 
 // 6. Вывести число, которое является зеркальным отображением последовательности цифр заданного числа,
 // например, задано число 123, вывести 321.
@@ -93,4 +96,14 @@ function getMirror(num) {
     }
     return Math.floor(result)
 }
-console.log(getMirror(45857484))
+// console.log(getMirror(45857484))
+
+module.exports = {
+    getSumNum,
+    checkNum,
+    getSqrtNum,
+    getSqrtNum1,
+    factorial,
+    sumOfNum,
+    getMirror
+}
