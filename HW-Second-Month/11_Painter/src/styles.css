@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+label, input {
+    margin: 5px;
+}
+canvas {
+    border: 1px solid black;
+    margin: 50px;
+}
